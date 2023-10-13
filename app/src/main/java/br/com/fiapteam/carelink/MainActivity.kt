@@ -2,12 +2,16 @@ package br.com.fiapteam.carelink
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import android.webkit.WebView
 import android.webkit.WebViewClient
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar()?.hide();
+
         setContentView(R.layout.activity_main)
 
         val webview: WebView = this.findViewById(R.id.webview);
